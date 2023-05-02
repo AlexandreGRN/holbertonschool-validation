@@ -6,5 +6,4 @@ go
 Hugo v0.89
 
 ## Lifecycle:
-I really like chicken nuggets
-clean
+I need help to clean my building post
