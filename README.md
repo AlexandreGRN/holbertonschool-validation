@@ -1,9 +1,9 @@
-#Introduction to DevOps: Automate Everything to Focus on What Really Matters
+# Introduction to DevOps: Automate Everything to Focus on What Really Matters
 
-##Prerequisites:
+## Prerequisites:
 In order to run this website, you will need the following software installed:
 go
 Hugo v0.89
 
-##Lifecycle:
+## Lifecycle:
 I really like chicken nuggets
