@@ -1,2 +1,1 @@
-apt install hugo
-make build
+apt install hugo && make build
