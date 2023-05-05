@@ -1,5 +1,4 @@
-apt update
-apt upgrade
+#!/bin/bash
+apt-get update
 apt-get install -y hugo make
 make build
-echo "make build" > setup.sh
