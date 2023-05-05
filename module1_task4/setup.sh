@@ -1,7 +1,12 @@
-apt update
-apt install curl -y
-curl -L https://github.com/gohugoio/hugo/releases/download/v0.88.1/hugo_extended_0.88.1_Linux-64bit.tar.gz -o hugo.tar.gz
-tar -zxvf hugo.tar.gz
-mv hugo /usr/local/bin/hugo
-rm hugo.tar.gz
+#!/bin/bash
+apt-get update
+apt-get install -y hugo make
+apt-get install -y make golang-go git curl
+curl -L https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_0.84.0_Linux-64bit.deb -o hugo.deb
+apt install ./hugo.deb
 make build
+if [ $? -eq 0 ]; then
+    exit 0
+else
+    exit 1
+fi
