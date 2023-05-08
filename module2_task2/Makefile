@@ -21,8 +21,8 @@ test:## Test
 lint:## Lint the code
 	golangci-lint run
 
-unit-tests:## Make unit-tests
-	-go test -v -short -coverprofile=coverage-units.out
-
 help:## Makefile help 
 	-grep "##" Makefile | head -n -1 | tr -d '#'
+
+unit-tests: ## Run Golang uni tests
+	@go test -v -short -coverprofile=coverage-units.out

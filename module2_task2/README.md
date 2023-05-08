@@ -13,4 +13,4 @@ make test -> test the server
 make clean -> clean the directory
 make help -> show an help
 make lint -> lint the go file
-make unit-tests -> Do the unit-tests
+make unit-tests -> Run files with the _test.go
