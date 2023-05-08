@@ -24,5 +24,5 @@ lint:## Lint the code
 help:## Makefile help 
 	-grep "##" Makefile | head -n -1 | tr -d '#'
 
-unit-tests: ## Run Golang uni tests
+unit-tests:## Run Golang uni tests
 	@go test -v -short -coverprofile=coverage-units.out
