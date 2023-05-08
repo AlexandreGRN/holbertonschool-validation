@@ -1,32 +1,20 @@
-build:## Build the application
-	make lint
-	-go mod init github.com/AlexandreGRN/awesome-api
-	-go build
+build:## Build the website
+	make check
+	hugo
 
-run:## Run
-	-./awesome-api >./awesome-api.log 2>&1 &
+clean:## Clean the website
+	-rm -r dist/
 
-stop:## Stop
-	pgrep awesome-api | xargs kill
+post:## Create a new post
+	-hugo new posts/$(POST_NAME).md && echo "---\ntitle: \"$(POST_TITLE)\"\ndate: 2022-11-20T09:03:20-08:00\ndraft: false\n---" > content/posts/$(POST_NAME).md
 
-clean:## Clean
-	-make stop
-	-rm awesome-api
-	-rm awesome-api.log
-	-rm coverage-units.out
-	-rm coverage-integrations.out
+check:## Check if post is valid
+	markdownlint -f ./content/posts/*.md
+	markdown-link-check ./content/posts/*.md
 
-test:## Test
-	make unit-tests
 
-lint:## Lint the code
-	golangci-lint run
-
-unit-tests:## Make unit-tests
-	go test -v -short -coverprofile=coverage-units.out
-
-integration-tests:## Make integration test
-	go test -v -coverprofile=coverage-integrations.out
+validate:## Validate the index
+	-./w3c_validator.py ./dist/index.html
 
 help:## Makefile help 
 	-grep "##" Makefile | head -n -1 | tr -d '#'

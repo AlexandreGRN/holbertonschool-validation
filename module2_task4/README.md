@@ -6,12 +6,9 @@ node 14._
 
 ## Lifecycle
 
-make build -> compile the main in executable
-make run -> launch the server
-make stop -> stop the server
-make test -> test the server
-make clean -> clean the directory
-make help -> show an help
-make lint -> lint the go file
-make unit-tests -> Do the unit-tests
-make integration-tests -> Do the integration tests
+build: Build the website
+clean: Clean the website
+post: Create a new post
+check: Check if post is valid
+validate: Validate the index
+help: Makefile help
