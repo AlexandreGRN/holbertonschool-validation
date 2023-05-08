@@ -23,5 +23,8 @@ lint:## Lint the code
 unit-tests:## Make unit-tests
 	go test -v -short -coverprofile=coverage-units.out
 
+integration-tests:## Make integration test
+	go test -v -coverprofile=integration-units.out
+
 help:## Makefile help 
 	-grep "##" Makefile | head -n -1 | tr -d '#'

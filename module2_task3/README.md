@@ -14,3 +14,4 @@ make clean -> clean the directory
 make help -> show an help
 make lint -> lint the go file
 make unit-tests -> Do the unit-tests
+make integration-tests -> Do the integration tests
