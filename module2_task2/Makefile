@@ -21,7 +21,7 @@ test:## Test
 lint:## Lint the code
 	golangci-lint run
 
-unit-tests:## Make unittest
+unit-tests:## Make unit-tests
 	go test -v -short -coverprofile=coverage-units.out
 
 help:## Makefile help 
