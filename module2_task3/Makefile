@@ -13,6 +13,8 @@ clean:## Clean
 	-make stop
 	-rm awesome-api
 	-rm awesome-api.log
+	-rm coverage-units.out
+	-rm coverage-integrations.out
 
 test:## Test
 	make unit-tests
