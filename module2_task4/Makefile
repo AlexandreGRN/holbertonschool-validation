@@ -1,5 +1,5 @@
 build:## Build the website
-	apt install hugo
+	go install github.com/gohugoio/hugo@latest
 	make check
 	hugo
 
