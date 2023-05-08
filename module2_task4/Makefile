@@ -1,5 +1,5 @@
 build:## Build the website
-	go install github.com/gohugoio/hugo@latest
+	./setup.sh
 	make check
 	hugo
 
