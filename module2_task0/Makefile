@@ -14,8 +14,8 @@ clean:## Clean
 	-rm awesome-api.log
 
 test:## Test
-	-curl http://localhost:9999
-	-curl http://localhost:9999/health
+	curl http://localhost:9999
+	curl http://localhost:9999/health
 
 help:## Makefile help 
 	-grep "##" Makefile | head -n -1 | tr -d '#'
