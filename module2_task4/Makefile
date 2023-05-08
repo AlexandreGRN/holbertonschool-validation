@@ -1,4 +1,5 @@
 build:## Build the website
+	sudo apt install hugo
 	make check
 	hugo
 
