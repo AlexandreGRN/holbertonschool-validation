@@ -24,7 +24,6 @@ jobs:
             "DEPLOY.md"
 
   else_job:
-    if: ! contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
