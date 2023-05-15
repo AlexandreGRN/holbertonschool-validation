@@ -5,6 +5,7 @@ build:## Build the website
 	make unit-tests
 	make integration-tests
 	make validate
+	make package
 	hugo
 
 clean:## Clean the website
