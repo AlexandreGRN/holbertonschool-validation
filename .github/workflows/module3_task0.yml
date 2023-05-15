@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-        - run: cd module3_task0/ && make help
+        - run: make help
