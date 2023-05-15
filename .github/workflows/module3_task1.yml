@@ -14,5 +14,4 @@ jobs:
         with:
           repository: ''
       - run: |
-          cd module3_task1/ && make help
-          make help
+          cd module3_task1/ && make help && make help
