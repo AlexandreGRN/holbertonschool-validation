@@ -3,6 +3,7 @@ build:## Build the website
 	make check
 	make lint
 	make unit-tests
+	make integration-tests
 	hugo
 
 clean:## Clean the website
@@ -18,6 +19,9 @@ check:## Check if post is valid
 
 unit-tests:## Make unittest
 	go test -v -short -coverprofile=coverage-units.out
+
+integration-tests: ## run intregrated tests
+    go test -v  -coverprofile=coverage-integrations.out
 
 validate:## Validate the index
 	-./w3c_validator.py ./dist/index.html
