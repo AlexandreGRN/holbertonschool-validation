@@ -10,10 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - run: ./setup.sh
-
       - uses: actions/checkout@v3
         with:
           repository: ''
+      - run: cd module3_task1/
 
-      - run: cd module3_task1/ && make build
+      - run: ./setup.sh
+
+      - run: make build
