@@ -16,6 +16,8 @@ check:## Check if post is valid
 	markdownlint -f ./content/posts/*.md
 	markdown-link-check ./content/posts/*.md
 
+unit-tests:## Make unittest
+	go test -v -short -coverprofile=coverage-units.out
 
 validate:## Validate the index
 	-./w3c_validator.py ./dist/index.html
