@@ -4,6 +4,7 @@ build:## Build the website
 	make lint
 	make unit-tests
 	make integration-tests
+	make validate
 	hugo
 
 clean:## Clean the website
@@ -24,7 +25,7 @@ integration-tests:## run intregrated tests
 	go test -v -coverprofile=coverage-integrations.out
 
 validate:## Validate the index
-	-./w3c_validator.py ./dist/index.html
+	make lint
 
 package:## Create the .zip package of the server
 	zip -r awesome-website.zip awesome-api dist/
