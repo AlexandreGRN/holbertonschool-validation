@@ -3,8 +3,6 @@ name: module3_task3
 
 "on":  # do something on push to main
   push:
-    tags:
-      - "*"
   schedule:
     - cron: "0 0 * * *"
 
