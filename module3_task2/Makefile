@@ -29,7 +29,7 @@ validate:## Validate the index
 	make lint
 
 package:## Create the .zip package of the server
-	zip -r awesome-website.zip awesome-api dist/
+	-zip -r awesome-website.zip awesome-api dist/
 
 lint:## Lint Readme and Deploy
 	-markdownlint README.md
