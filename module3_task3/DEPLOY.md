@@ -27,3 +27,7 @@ To verify the application is running:
 
 1. Access the healthcheck endpoint: `http://localhost:9999/healthcheck`
 2. Hope it works
+
+## Release
+1. When tag is provided, the release is created automatically
+2. It will create a zip file containing the package of the website
