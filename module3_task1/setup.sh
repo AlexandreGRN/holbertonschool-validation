@@ -9,3 +9,9 @@ sudo curl -L https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_ext
 sudo apt install ./hugo.deb
 sudo rm hugo.deb
 sudo rm yq_linux_amd64.tar.gz
+wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Linux-64bit.tar.gz
+tar -xf hugo_0.111.3_Linux-64bit.tar.gz
+sudo mv ./hugo /usr/bin/
+sudo rm hugo_0.111.3_Linux-64bit.tar.gz
+sudo npm install -g markdownlint-cli
+sudo npm install -g markdown-link-check
