@@ -2,6 +2,7 @@ build:## Build the website
 	./setup.sh
 	make check
 	make lint
+	make unit-tests
 	hugo
 
 clean:## Clean the website
