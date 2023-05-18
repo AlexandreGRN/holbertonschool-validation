@@ -5,8 +5,8 @@ build:## Build the website
 	make unit-tests
 	make integration-tests
 	make validate
-	make package
 	hugo
+	make package
 
 clean:## Clean the website
 	-rm -r dist/
