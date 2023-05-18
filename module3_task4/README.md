@@ -9,7 +9,7 @@ node 14._
 build: Build the website
 clean: Clean the website
 post: Create a new post
-check: Check if post is valid
+check: Check the if post is valid
 validate: Validate the index
 package: Package the website
 lint: Lint the README.md and DEPLOY.md
