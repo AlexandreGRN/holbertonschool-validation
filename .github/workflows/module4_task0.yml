@@ -2,9 +2,6 @@
 name: module4_task0
 
 "on":  # do something on push to main
-  pull_request:
-    branches:
-      - main
   push:
   schedule:
     - cron: "0 0 * * *"
@@ -25,17 +22,3 @@ jobs:
         with:
           files: module4_task0/awesome-website.zip
           body_path: module4_task0/DEPLOY.md
-      - name: Netlify
-        if: github.event_name == 'pull_request'||github.ref == 'refs/heads/main'
-        uses: nwtgck/actions-netlify@v2.0
-        with:
-          publish-dir: 'module4_task0/dist'
-          production-branch: main
-          enable-pull-request-comment: true
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
