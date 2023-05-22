@@ -4,6 +4,7 @@ wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Li
 tar -xf hugo_0.111.3_Linux-64bit.tar.gz
 sudo mv ./hugo /usr/bin/
 sudo rm hugo_0.111.3_Linux-64bit.tar.gz
+sudo apt-get install -y npm
 sudo npm install -g markdownlint-cli
 sudo npm install -g markdown-link-check
 sudo npm install netlify-cli -g
